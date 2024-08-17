@@ -1,0 +1,52 @@
+package firstProgram;
+
+public class FirstDay {
+
+	public static void main(String[] args) {
+		
+//2. Print multiples of 1 to 10 table
+				//nested for loop		
+		
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Multiplication Table for " + i + ":");
+            System.out.println("-----------------------------");
+ 
+            
+            for (int j = 1; j <= 10; j++) {
+                System.out.printf("%d X %d = %d%n", i, j, i * j);
+            }
+ 
+            
+            System.out.println("-----------------------------\n");
+        }
+
+		
+//1. Print Fibonacci Series until 1000
+		
+	System.out.print("Fibonacci Series until 1000: ");
+		
+	 	int j = 0;
+	 	int fibValue;
+	 	while (true) {
+	 		fibValue = fib(j);
+		            if (fibValue > 1000) {
+		                break;
+		            }
+		            System.out.print(fibValue + " ");
+		            j++;
+		        }}
+		   
+		    public static int fib(int n) {
+		        if (n == 0) {
+		            return 0;
+		        } else if (n == 1) {
+		            return 1;
+		        } else {
+		            return fib(n - 1) + fib(n - 2);
+		        }
+		    	 
+
+
+	}
+
+}

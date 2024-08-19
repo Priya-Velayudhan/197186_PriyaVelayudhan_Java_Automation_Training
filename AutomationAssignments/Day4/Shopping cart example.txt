@@ -1,0 +1,99 @@
+class ShoppingCart{
+	//data members
+	//array of products
+	
+	Product aprod[];
+	int cindex;
+	float total;
+	
+//constructors
+ShoppingCart(){
+	aprod = new Product[5];
+	cindex = 0;
+}
+
+//member method - add product
+Product addProduct(Product prod) {
+	aprod[cindex] = prod;
+	cindex++;
+	return prod;
+}
+
+// list of products
+void listProducts(){
+	for (int i=0; i<cindex; i++) {
+		aprod[i].display();
+	}
+	
+}
+
+
+
+public void checkOut() {
+	for (int i=0; i<cindex; i++) {
+		total+=aprod[i].productPrice;
+		aprod[i].displayTotalPrice();
+
+	}
+	
+}
+
+void emptyCart() {
+	aprod = new Product[5];
+	cindex =0;
+	System.out.println("all products removed ");
+}
+
+}
+
+class Product{
+		 
+ 	int productId;
+	String productName;
+	float productPrice;
+	boolean stockStatus;
+	
+	Product ()
+	{
+		productPrice=0;
+	}
+	Product( int Id, String pName, float pPrice){
+		productId = Id;
+		productName = pName;
+		productPrice = pPrice;
+		
+	}
+	
+	void display ()
+	{
+		System.out.println(" ID: " +productId + "    Name: "+productName+   " price: "+productPrice);
+	}
+	
+	void displayTotalPrice ()
+	{
+		System.out.println(" total price: "+productPrice );
+	}
+
+}
+
+public class Shopping {
+	
+	public static void main(String[] args) {
+		ShoppingCart scart = new ShoppingCart();
+		Product p1 = new Product(10, "Mobile", 16000);
+		scart.addProduct(p1);
+		
+		Product p2 = new Product(20, "Clothing", 3000);
+		
+		
+		scart.addProduct(p2);
+		
+		
+		scart.listProducts();
+		scart.checkOut();
+		scart.emptyCart();
+		
+	}
+	
+
+}

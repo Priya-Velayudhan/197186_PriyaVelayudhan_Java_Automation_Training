@@ -1,0 +1,26 @@
+package Mainpackager;
+
+abstract class Animal{
+	abstract void move ();
+	void eat() {
+		System.out.println("Animal.eat()");
+	}
+}
+// Concrete class
+
+class Snake extends Animal {
+	@Override
+	void move() {
+		System.out.println("Crawling...");
+	}
+	}
+
+public class AbstractEg {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Animal obj = new Snake();
+       obj.move();
+	}
+
+}

@@ -1,1 +1,34 @@
+package Mainpackager;
+
+
+class Product{
+	int id;
+	String name;
+	
+	void display() {
+		System.out.println("Product.display()");
+	}
+}
+
+class electronicproduct extends Product{
+	float voltage;
+	void display() {
+		System.out.println("electronicproduct.display()");
+		}
+}
+
+
+public class OverridingEg {
+
+	public static void main(String[] args) {
+		Product obj = new electronicproduct();
+		obj.display();//display of derived  method overriding dynamic polymorphism
+		
+		obj = new Product();
+		obj.display();//display base
+		
+
+	}
+
+}
 

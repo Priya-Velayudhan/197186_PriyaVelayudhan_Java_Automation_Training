@@ -1,0 +1,9 @@
+DataLayer:
+Venkatareddy and Rafee
+
+Service Layer:
+Priya and Amith
+
+App Layer: 
+Sasmita and Ajith
+
